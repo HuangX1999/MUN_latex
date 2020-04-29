@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%模拟联合国决议草案Latex模版
+%模版作者：黄鑫，有关于本Latex模版
+%的技术性问题或改进意见请通过邮箱
+%2357887h@studen.gla.ac.uk与我取得联系
+%Date: 2020/04/29
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%对Latex基本操作不了解的同学
+%请不要随意调整无注释部分的内容！
+
+\documentclass[12pt,a4paper]{report}
+%调整纸张大小与字号
+\usepackage[top=1in, bottom=1in, left=1.3in,right=1.3in]{geometry} 
+%调整页边距
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+%调整颜色
+\usepackage{graphicx} 
+\usepackage[dvips, bookmarks, colorlinks=false]{hyperref}
+\usepackage{float}
+\usepackage{pslatex} 
+\usepackage{setspace}
+\usepackage{array} 
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+\fancyfoot[L]{\emph{Model United Nations - Documents}}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{% 
+\markboth{#1}{}} 
+\fancyfoot[LO,LE]{\emph{Draft Resolution - Version 1.1}}
+%调整文章底部标注，如：工作文件1.1，决议草案1.1
+\cfoot{}
+\fancyfoot[RO, RE]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%正文部分
+\begin{document}
+
+\input{header.tex}
+%在header.tex中编辑委员会信息、起草国以及附议国
+\input{body1.tex}
+%在body1.tex中编辑正文信息（序言性条款、程序性条款）
+\end{document}
